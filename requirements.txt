@@ -1,0 +1,7 @@
+Flask
+google-cloud-datastore
+gunicorn
+Werkzeug
+googlemaps
+flask-googlemaps
+google-api-python-client

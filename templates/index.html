@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>My Place</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+	<script type="text/javascript">
+
+		navigator.geolocation.getCurrentPosition(function(position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            var base_url = window.location.origin;
+            window.location = base_url + "/?latitude=" + lat + "&longitude=" + lng;
+        });
+	</script>
+
+	{% endblock %}
+</body>
+</html>
